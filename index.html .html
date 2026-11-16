@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business OS — نظام الأعمال والمالية للمستقلين وأصحاب المتاجر</title>
+<meta name="description" content="قالب Notion عربي متكامل يدمج مشاريعك وماليتك وعملاءك ومحتواك في نظام واحد. احسب صافي ربحك وهامشك تلقائياً، وتابع مهامك ومتابعات عملائك. سعر الإطلاق 15$ بدل 49$.">
+<meta name="theme-color" content="#1f6f4e">
+<meta property="og:title" content="Business OS — نظام الأعمال والمالية للمستقلين وأصحاب المتاجر">
+<meta property="og:description" content="توقف عن إدارة عملك بالفوضى. نظام واحد يدمج مهامك وماليتك وعملاءك — مع حساب أرباح تلقائي ولوحة تحكم واضحة.">
+<meta property="og:image" content="https://YOUR-DOMAIN.com/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="product">
+<meta property="og:locale" content="ar_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --soft:#f7f6f3;
+  --ink:#1b1b19; --ink2:#5f5f5b; --ink3:#95958f;
+  --line:#e5e4df; --line2:#d5d4ce;
+  --brand:#1f6f4e; --brand-dark:#14503a; --brand-soft:#e8f3ed;
+  --gold-soft:#fdf4e5;
+  --danger:#a13b2f; --danger-soft:#fbecea;
+  --shadow:0 4px 14px rgba(0,0,0,.07);
+  --shadow-l:0 24px 60px rgba(0,0,0,.13);
+  --r:14px; --r-s:10px;
+  --font:"Noto Kufi Arabic","Noto Naskh Arabic","Segoe UI",Tahoma,sans-serif;
+  --max:1140px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;padding-bottom:76px;font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.35;letter-spacing:-.4px}
+p{margin:0 0 14px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+section[id]{scroll-margin-top:74px}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* أزرار */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 30px;border-radius:12px;font-weight:800;font-size:16px;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .15s,box-shadow .15s,background .15s;font-family:inherit;line-height:1.2}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 10px 26px rgba(31,111,78,.28)}
+.btn-primary:hover{background:var(--brand-dark)}
+.btn-lg{padding:19px 44px;font-size:18px}
+.btn-sm{padding:9px 18px;font-size:14px;border-radius:9px}
+.btn-ghost{background:#fff;border-color:var(--line2);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink3)}
+.btn-block{width:100%}
+
+/* الرأس */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:18px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px;text-decoration:none}
+.logo i{width:34px;height:34px;border-radius:9px;background:var(--brand);color:#fff;display:grid;place-items:center;font-style:normal;font-size:13px;font-weight:900}
+.head-in .sp{flex:1}
+.head-price{font-size:13.5px;color:var(--ink2);font-weight:700}
+.head-price b{color:var(--ink)}
+.head-price s{color:var(--ink3)}
+@media(max-width:760px){.head-price{display:none}}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,#f6faf7 0%,#fff 100%);padding:60px 0 66px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset-block-start:-180px;inset-inline-end:-140px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(31,111,78,.09),transparent 65%)}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;position:relative}
+.badge-top{display:inline-flex;align-items:center;gap:8px;background:var(--brand-soft);color:var(--brand-dark);border:1px solid #cfe5d9;border-radius:999px;padding:7px 16px;font-size:13px;font-weight:800;margin-bottom:20px}
+.hero h1{font-size:41px;line-height:1.28;margin-bottom:18px}
+.hero h1 .hl{color:var(--brand);position:relative;white-space:nowrap}
+.hero h1 .hl::after{content:"";position:absolute;inset-inline:0;bottom:-4px;height:9px;background:rgba(31,111,78,.16);border-radius:3px}
+.hero .sub{font-size:18px;color:var(--ink2);max-width:560px;margin-bottom:26px}
+.hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:22px}
+.price-inline{display:flex;align-items:baseline;gap:10px;margin-bottom:18px}
+.price-old{font-size:22px;color:var(--ink3);text-decoration:line-through;font-weight:700;direction:ltr;display:inline-block}
+.price-now{font-size:38px;font-weight:900;color:var(--brand);letter-spacing:-1.5px;direction:ltr;display:inline-block}
+.price-tag{background:var(--danger-soft);color:var(--danger);font-size:12.5px;font-weight:800;padding:4px 11px;border-radius:7px}
+.hero-points{display:flex;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--ink2);font-weight:600}
+.hero-points span{display:flex;align-items:center;gap:7px}
+.tick{width:19px;height:19px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-size:11px;font-weight:900;flex:none;font-style:normal}
+.shot{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-l);border:1px solid var(--line);background:#fff}
+.shot img{width:100%}
+.shot-cap{position:absolute;inset-block-end:12px;inset-inline-start:12px;background:rgba(255,255,255,.96);border-radius:9px;padding:7px 13px;font-size:12.5px;font-weight:700;box-shadow:var(--shadow)}
+.float-card{position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 15px;box-shadow:var(--shadow);font-size:13px;font-weight:700}
+.fc1{inset-block-start:22px;inset-inline-start:-16px}
+.fc2{inset-block-end:26px;inset-inline-end:-12px}
+.float-card small{display:block;color:var(--ink3);font-weight:600;font-size:11.5px}
+@media(max-width:980px){.hero-in{grid-template-columns:1fr;gap:34px}.hero h1{font-size:33px}.float-card{display:none}}
+
+/* شريط الأرقام */
+.strip{background:var(--ink);color:#fff;padding:26px 0}
+.strip-in{display:flex;justify-content:space-around;gap:22px;flex-wrap:wrap;text-align:center}
+.strip b{display:block;font-size:26px;font-weight:900;letter-spacing:-.5px;direction:ltr}
+.strip span{font-size:13px;color:rgba(255,255,255,.75)}
+
+/* عناوين الأقسام */
+.sec-head{text-align:center;max-width:720px;margin:0 auto 44px}
+.sec-head .kicker{color:var(--brand);font-weight:800;font-size:14px;letter-spacing:.3px;margin-bottom:9px;display:block}
+.sec-head h2{font-size:33px;margin-bottom:12px}
+.sec-head p{color:var(--ink2);font-size:17px;margin:0}
+
+/* شبكة */
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.g3,.g4{grid-template-columns:1fr}}
+
+/* المشكلة */
+.pain,.alt{background:var(--soft)}
+.pain .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.pain .card h3{font-size:17px;margin-bottom:8px;display:flex;align-items:center;gap:9px}
+.pain .card p{font-size:14.5px;color:var(--ink2);margin:0}
+.pain .ico{width:32px;height:32px;border-radius:9px;background:var(--danger-soft);color:var(--danger);display:grid;place-items:center;font-size:16px;flex:none}
+
+/* الوحدات */
+.module{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:64px}
+.module:last-child{margin-bottom:0}
+.module.flip .mod-txt{order:2}
+.module .mod-txt h3{font-size:25px;margin-bottom:12px}
+.module .mod-txt p{color:var(--ink2);font-size:15.5px}
+.module ul{margin:14px 0 0;padding:0;list-style:none}
+.module ul li{display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;font-size:14.5px;color:var(--ink2)}
+.mod-tag{display:inline-block;background:var(--brand-soft);color:var(--brand-dark);font-size:12.5px;font-weight:800;padding:4px 12px;border-radius:999px;margin-bottom:12px}
+.mod-shot{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-l)}
+@media(max-width:900px){.module{grid-template-columns:1fr;gap:24px;margin-bottom:48px}.module.flip .mod-txt{order:0}}
+
+/* الخطوات */
+.steps{counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:36px;height:36px;border-radius:11px;background:var(--brand);color:#fff;font-weight:900;font-size:17px;margin-bottom:14px}
+.step h3{font-size:17.5px;margin-bottom:8px}
+.step p{font-size:14.5px;color:var(--ink2);margin:0}
+
+/* العرض */
+.offer{border:2px solid var(--brand);border-radius:18px;padding:34px;position:relative;background:#fff;box-shadow:var(--shadow-l)}
+.offer::before{content:"عرض الإطلاق";position:absolute;inset-block-start:-15px;inset-inline-end:26px;background:var(--danger);color:#fff;font-size:13px;font-weight:900;padding:6px 16px;border-radius:999px}
+.offer h3{font-size:23px;margin-bottom:6px}
+.offer .strike{color:var(--ink3);text-decoration:line-through;font-size:19px;font-weight:700;direction:ltr;display:inline-block}
+.offer .now{font-size:50px;font-weight:900;color:var(--brand);letter-spacing:-2px;line-height:1.1;direction:ltr;text-align:right}
+.offer .now small{font-size:20px;font-weight:800}
+.offer ul{list-style:none;padding:0;margin:20px 0 0}
+.offer ul li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.offer ul li:last-child{border:0}
+.offer .val{color:var(--ink3);font-size:13px;white-space:nowrap;margin-inline-start:auto}
+.guarantee{background:var(--brand-soft);border:1px solid #cfe5d9;border-radius:var(--r-s);padding:14px 16px;font-size:13.5px;color:var(--brand-dark);display:flex;gap:11px;align-items:flex-start;margin-top:18px}
+.note-box{background:var(--gold-soft);border:1px solid #efdcb8;border-radius:var(--r-s);padding:14px 16px;font-size:13.5px;color:#6f4c12}
+
+/* المكونات */
+.incl{background:#fff;border:1px solid var(--line);border-radius:var(--r-s);padding:18px}
+.incl h4{font-size:15.5px;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.incl p{font-size:13.5px;color:var(--ink2);margin:0}
+.incl .b{width:28px;height:28px;border-radius:8px;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-size:13px;font-weight:900;flex:none}
+
+/* الأسئلة */
+details{border:1px solid var(--line);border-radius:var(--r-s);padding:15px 18px;margin-bottom:10px;background:#fff}
+summary{cursor:pointer;font-weight:800;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;color:var(--brand);font-weight:400;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin:12px 0 0;color:var(--ink2);font-size:14.5px}
+
+/* الخاتمة */
+.final{background:linear-gradient(180deg,#fff 0%,#f2f8f5 100%);text-align:center}
+.final .box{max-width:680px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:38px 30px;box-shadow:var(--shadow-l)}
+.final h2{font-size:30px;margin-bottom:14px}
+.final p{color:var(--ink2);font-size:16.5px}
+
+/* الشريط السفلي */
+.sticky{position:fixed;inset-block-end:0;inset-inline:0;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 0;z-index:60;box-shadow:0 -4px 20px rgba(0,0,0,.07)}
+.sticky-in{display:flex;align-items:center;gap:16px}
+.sticky-in .sp{flex:1}
+.sticky-price{display:flex;align-items:center;gap:9px;font-weight:800}
+.sticky-price b{font-size:23px;color:var(--brand);direction:ltr;display:inline-block}
+.sticky-price s{color:var(--ink3);font-size:15px;direction:ltr}
+.sticky-price em{font-style:normal;color:var(--danger);background:var(--danger-soft);padding:3px 9px;border-radius:6px;font-size:12px}
+@media(max-width:620px){.sticky-price s{display:none}.sticky .btn-sm{padding:11px 18px}}
+
+/* التذييل */
+footer{background:var(--ink);color:rgba(255,255,255,.7);padding:44px 0 30px;font-size:13.5px}
+footer h4{color:#fff;font-size:15px;margin-bottom:12px}
+footer a{color:rgba(255,255,255,.85);text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+footer ul{list-style:none;padding:0;margin:0;line-height:2.1}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:34px;margin-bottom:30px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr;gap:22px}}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap head-in">
+    <a class="logo" href="#top"><i>OS</i> Business OS</a>
+    <div class="sp"></div>
+    <div class="head-price">سعر الإطلاق <b>15$</b> <s>49$</s></div>
+    <a class="btn btn-primary btn-sm" href="#buy" data-cta>احصل على نسختك</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <span class="badge-top">● قالب Notion عربي متكامل + نسخة مستقلة تعمل فوراً</span>
+      <h1>توقّف عن إدارة عملك <span class="hl">بالفوضى</span>. نظام واحد يدمج مهامك وماليتك وعملاءك.</h1>
+      <p class="sub">قالب «Business OS» المصمّم خصيصاً للمستقلين وأصحاب المشاريع المصغرة وأصحاب المتاجر الإلكترونية — لتوفير وقتك في العمل الإداري وتركيزه على ما يُنمّي عملك، بدون تعقيد ولا برامج باهظة الثمن.</p>
+      <div class="price-inline">
+        <span class="price-tag">سعر الإطلاق</span>
+        <span class="price-now">15$</span>
+        <span class="price-old">49$</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="#buy" data-cta>احصل على نسختك الآن</a>
+        <a class="btn btn-ghost btn-lg" href="#inside">شاهد ما بداخل القالب</a>
+      </div>
+      <div class="hero-points">
+        <span><i class="tick">✓</i> تسليم فوري بعد الدفع</span>
+        <span><i class="tick">✓</i> النسخة المستقلة تعمل بلا إنترنت</span>
+        <span><i class="tick">✓</i> بياناتك عندك وحدك</span>
+        <span><i class="tick">✓</i> ضمان استرجاع 14 يوماً</span>
+      </div>
+    </div>
+    <div style="position:relative">
+      <div class="shot">
+        <img src="images/01-dashboard.png" width="1280" height="800" alt="لوحة تحكم Business OS تعرض صافي الربح وهامش الربح والمشاريع والمهام المستحقة">
+        <div class="shot-cap">لوحة التحكم — أرقامك تتحدث تلقائياً</div>
+      </div>
+      <div class="float-card fc1">صافي الربح <small>يُحسب من قيودك أنت</small></div>
+      <div class="float-card fc2">4 وحدات في نظام واحد <small>مشاريع · مالية · عملاء · محتوى</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- أرقام -->
+<div class="strip">
+  <div class="wrap strip-in">
+    <div><b>4</b><span>وحدات عمل متكاملة</span></div>
+    <div><b>6</b><span>قواعد بيانات جاهزة</span></div>
+    <div><b>60</b><span>مهمة جاهزة للمتاجر</span></div>
+    <div><b>5</b><span>دقائق روتين يومي</span></div>
+    <div><b>0$</b><span>اشتراكات شهرية</span></div>
+  </div>
+</div>
+
+<!-- المشكلة -->
+<section class="pain">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">المشكلة</span>
+      <h2>الوقت الذي يضيع في الفوضى لا يظهر في حسابك البنكي</h2>
+      <p>كل يوم تقضيه وأنت تبحث عن طلبية، وتسأل عن مصروف، وتتابع عميلاً، وتحدّث ملاحظات في ثلاثة تطبيقات مختلفة — هذا ليس عملاً، هذا عبء إداري.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card"><h3><span class="ico">💸</span> أموالك غير مرئية</h3><p>تعرف ما دخل الشهر، ولا تعرف كم صافي الربح بعد الشحن والإعلانات والاشتراكات. النتيجة: تبيع أكثر، وتربح أقل.</p></div>
+      <div class="card"><h3><span class="ico">🧩</span> مهامك متناثرة</h3><p>المهمة في ملاحظة، والتذكير في جوالك، والطلب في محادثة قديمة. وما تنساه يظهر أثره عند العميل، لا عندك.</p></div>
+      <div class="card"><h3><span class="ico">🤝</span> متابعات ضائعة</h3><p>عميل قال «أرسل لي التفاصيل» قبل أسبوعين، ولم تتابعه. الصفقة كانت جاهزة، والمتابعة كانت كل ما نقص.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- الوحدات -->
+<section id="inside">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">ما بداخل القالب</span>
+      <h2>أربع وحدات، نفس النظام، بلا تنقّل بين التطبيقات</h2>
+      <p>كل البيانات في قواعد بيانات مترابطة، وكل رقم مشتقّ يُحسب تلقائياً بدل أن تحسبه يدوياً.</p>
+    </div>
+
+    <div class="module flip">
+      <div class="mod-txt">
+        <span class="mod-tag">الوحدة 1</span>
+        <h3>إدارة المشاريع — لوحة كانبان تعمل بالسحب</h3>
+        <p>تابع كل مشروع من الفكرة حتى التسليم على لوحة واحدة. اسحب البطاقة بين الأعمدة فتتحدّث حالتها فوراً، ويظهر الربح المتوقع ونسبة الإنجاز على البطاقة نفسها.</p>
+        <ul>
+          <li><i class="tick">✓</i> مراحل: فكرة ← مخطط ← قيد التنفيذ ← قيد المراجعة ← مكتمل</li>
+          <li><i class="tick">✓</i> ربط المشروع بالعميل وبالمهام وبالحركات المالية</li>
+          <li><i class="tick">✓</i> حساب الربح المتوقع وهامش الربح والأيام المتبقية</li>
+          <li><i class="tick">✓</i> قائمة المهام المتأخرة تلقائياً مع سبب التأخير</li>
+        </ul>
+      </div>
+      <div class="mod-shot"><img src="images/02-projects-kanban.png" width="1280" height="800" loading="lazy" alt="لوحة كانبان للمشاريع في Business OS"></div>
+    </div>
+
+    <div class="module">
+      <div class="mod-txt">
+        <span class="mod-tag">الوحدة 2</span>
+        <h3>التتبع المالي — صافي الربح يُحسب وحده</h3>
+        <p>سجّل كل إيراد وكل مصروف مرة واحدة، وينتج الباقي تلقائياً: صافي الربح، هامش الربح، توزيع المصروفات على الفئات، والتدفق النقدي برصيد تراكمي.</p>
+        <ul>
+          <li><i class="tick">✓</i> تصنيف تلقائي: إيراد/مصروف، وفئات جاهزة للمتاجر</li>
+          <li><i class="tick">✓</i> هامش الربح بنسبة مئوية واضحة لا كرقم غامض</li>
+          <li><i class="tick">✓</i> رسم بياني لستة أشهر: إيرادات مقابل مصروفات</li>
+          <li><i class="tick">✓</i> تدفق نقدي منفصل عن الربحية — لا تخلط بينهما</li>
+        </ul>
+      </div>
+      <div class="mod-shot"><img src="images/03-finance.png" width="1280" height="800" loading="lazy" alt="شاشة التتبع المالي والأرباح في Business OS"></div>
+    </div>
+
+    <div class="module flip">
+      <div class="mod-txt">
+        <span class="mod-tag">الوحدة 3</span>
+        <h3>إدارة العملاء — لا تسقط صفقة من المتابعة</h3>
+        <p>جدول واحد يجمع كل عميل: من أين جاء، وما قيمة الصفقة، وأين وصل الطلب، ومتى يجب أن تتواصل معه. المتابعات المتأخرة تُعلَّم تلقائياً باللون الأحمر.</p>
+        <ul>
+          <li><i class="tick">✓</i> حالات: جديد ← متابعة ← تم البيع ← خسارة</li>
+          <li><i class="tick">✓</i> تنبيه تلقائي لكل متابعة تجاوزت موعدها</li>
+          <li><i class="tick">✓</i> خط صفقات مُجمَّع: كم من الفرص مفتوحة الآن</li>
+          <li><i class="tick">✓</i> نسبة إغلاق محسوبة تلقائياً</li>
+        </ul>
+      </div>
+      <div class="mod-shot"><img src="images/04-crm.png" width="1280" height="800" loading="lazy" alt="شاشة إدارة العملاء والمتابعات في Business OS"></div>
+    </div>
+
+    <div class="module">
+      <div class="mod-txt">
+        <span class="mod-tag">الوحدة 4</span>
+        <h3>بنك الأفكار والمحتوى — خط محتوى لا يتوقف</h3>
+        <p>كل فكرة تسجّلها تتحول إلى مهمة نشر لها تاريخ. لا تُضِع فكرة بعد اليوم، ولا تنسَ نشر ما كتبته بالأمس.</p>
+        <ul>
+          <li><i class="tick">✓</i> حالات: فكرة ← مسودة ← مجدول ← منشور</li>
+          <li><i class="tick">✓</i> تقويم نشر لكل منصاتك في مكان واحد</li>
+          <li><i class="tick">✓</i> حقل «الخطاف» — أهم سطر في أي منشور</li>
+          <li><i class="tick">✓</i> حقل أداء لقياس ما ينجح فعلاً</li>
+        </ul>
+      </div>
+      <div class="mod-shot"><img src="images/05-content.png" width="1280" height="800" loading="lazy" alt="بنك الأفكار والمحتوى في Business OS"></div>
+    </div>
+  </div>
+</section>
+
+<!-- كيف يعمل -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">كيف يعمل</span>
+      <h2>من الشراء إلى أول رقم حقيقي… في جلسة واحدة</h2>
+      <p>لا يوجد «إعداد معقد». ولو أردت النظام في Notion نفسه، فالدليل المرفق يشرح كل خطوة بالصور.</p>
+    </div>
+    <div class="grid g3 steps">
+      <div class="step"><h3>افتح النسخة المستقلة فوراً</h3><p>ملف HTML واحد تفتحه في متصفحك. لا حساب، لا اشتراك، لا انتظار — اكتب اسم نشاطك وابدأ بتسجيل قيودك.</p></div>
+      <div class="step"><h3>انقل نظامك إلى Notion</h3><p>اتبع دليل البناء: استورد 6 ملفات CSV، وأضف الصيغ الجاهزة، واربط العروض. أقل من 40 دقيقة، ومرة واحدة فقط.</p></div>
+      <div class="step"><h3>اعتمد الروتين اليومي</h3><p>5 دقائق صباحاً: نظّف المتأخر، وسجّل الحركة المالية، وتابع عميلاً واحداً. الباقي يعمل تلقائياً.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ما تحصل عليه -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">ماذا تحصل عليه</span>
+      <h2>كل ما تحتاجه — لحظة الدفع</h2>
+      <p>لا اشتراكات شهرية، ولا رسوم تجديد، ولا حروف صغيرة: هذه كل الملفات التي تصلك مباشرة بعد الشراء.</p>
+    </div>
+    <div class="grid g4">
+      <div class="incl"><h4><span class="b">1</span> قالب Notion كامل</h4><p>صفحة رئيسية منظّمة بأربع وحدات، مع مواصفات كل قاعدة بيانات والعروض المطلوبة.</p></div>
+      <div class="incl"><h4><span class="b">2</span> 6 قواعد بيانات CSV</h4><p>المشاريع، المهام، الإيرادات والمصروفات، التدفقات النقدية، العملاء، بنك المحتوى — جاهزة للاستيراد.</p></div>
+      <div class="incl"><h4><span class="b">3</span> دليل البناء خطوة بخطوة</h4><p>ضبط الأنواع والصيغ والعلاقات والعروض ولوحة التحكم — مع جدول حلول لكل خطأ شائع.</p></div>
+      <div class="incl"><h4><span class="b">4</span> دليل التشغيل السريع</h4><p>خطة أول 3 ساعات، وأول 30 دقيقة، والأخطاء الشائعة — موجّه لمن يفتح الملف لأول مرة.</p></div>
+      <div class="incl"><h4><span class="b">5</span> مكتبة 60 مهمة للمتاجر</h4><p>مهام جاهزة مقسّمة حسب مجالات العمل: الطلبات والشحن، خدمة العملاء، التسويق، المخزون، المالية، النمو.</p></div>
+      <div class="incl"><h4><span class="b">6</span> سكريبت فيديو 3 دقائق</h4><p>سيناريو العرض وقائمة اللقطات، لتوثيق العرض بنفسك في 20 دقيقة.</p></div>
+      <div class="incl"><h4><span class="b">7</span> أسئلة شائعة وسياسة استرجاع</h4><p>إجابات مكتوبة عن كل ما يُسأل عنه، مع ترخيص استخدام واضح.</p></div>
+      <div class="incl"><h4><span class="b">8</span> تحديثات مجانية</h4><p>كل نسخة محسّنة تصلك دون أي رسوم إضافية، ما دام المنتج قائماً.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- العرض -->
+<section id="buy" class="alt" style="padding:80px 0">
+  <div class="wrap" style="max-width:900px">
+    <div class="sec-head">
+      <span class="kicker">عرض الإطلاق</span>
+      <h2>وفّر 34$ — لفترة محدودة</h2>
+      <p>سعر الإطلاق مؤقت، وبعد انتهاء المدة يعود السعر إلى 49$.</p>
+    </div>
+    <div class="offer">
+      <h3>Business OS — نظام الأعمال والمالية</h3>
+      <div style="margin:10px 0 4px">
+        <span class="strike">49$</span>
+        <span class="price-tag" style="margin-inline-start:8px">وفّر 34$</span>
+      </div>
+      <div class="now">15<small>$</small></div>
+      <div style="color:var(--ink2);font-size:14.5px">دفعة واحدة · بدون اشتراك · تسليم فوري</div>
+      <ul>
+        <li><i class="tick">✓</i> قالب Notion عربي (4 وحدات + 6 قواعد بيانات) <span class="val">قيمته 20$</span></li>
+        <li><i class="tick">✓</i> النسخة المستقلة التي تعمل فوراً بلا Notion <span class="val">قيمتها 10$</span></li>
+        <li><i class="tick">✓</i> مكتبة 60 مهمة للمتاجر الإلكترونية <span class="val">قيمتها 8$</span></li>
+        <li><i class="tick">✓</i> دليل البناء + دليل التشغيل السريع + سكريبت الفيديو <span class="val">قيمتها 6$</span></li>
+        <li><i class="tick">✓</i> أسئلة شائعة + سياسة استرجاع + ترخيص واضح <span class="val">قيمتها 2$</span></li>
+        <li><i class="tick">✓</i> تحديثات مجانية (ما دام المنتج قائماً) <span class="val">قيمتها 3$</span></li>
+      </ul>
+      <div style="margin-top:24px">
+        <a class="btn btn-primary btn-lg btn-block" href="#" data-cta>احصل على نسختك الآن — 15$</a>
+        <div style="text-align:center;margin-top:12px;font-size:13px;color:var(--ink2)">وصول فوري إلى الملفات · استرجاع خلال 14 يوماً</div>
+      </div>
+      <div class="guarantee" id="refund">
+        <span style="font-size:20px" aria-hidden="true">🛡</span>
+        <div><b>ضمان استرجاع 14 يوماً بلا أسئلة.</b> جرّب القالب على نشاطك الحقيقي. إن لم تشعر أنه وفّر لك وقتاً فعلياً، فاطلب الاسترجاع خلال 14 يوماً من الشراء وسنعيد إليك المبلغ كاملاً.</div>
+      </div>
+    </div>
+    <div class="note-box" style="margin-top:22px">
+      <b>ملاحظة صريحة:</b> هذا منتج رقمي — لا توجد فيه «جلسة استشارة» ولا «فريق دعم مخصص»، بل ملفات جاهزة ودليل واضح وتحديثات مجانية. نذكر ذلك الآن لتجد بعد الشراء ما اشتريته فعلاً.
+    </div>
+  </div>
+</section>
+
+<!-- أسئلة -->
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <div class="sec-head">
+      <span class="kicker">أسئلة شائعة</span>
+      <h2>قبل أن تشتري</h2>
+    </div>
+    <details open><summary>هل أحتاج اشتراك Notion مدفوعاً؟</summary><p>ليس للبدء. الحساب المجاني يكفي لاستيراد القالب واستخدام الجداول والقوائم. لكن بعض الميزات المتقدمة (العلاقات بين قواعد البيانات، وRollup، والصيغ، وعرض الخط الزمني) قد تتطلب خطة Notion مدفوعة حسب سياسة Notion الحالية. وإن كنت على الخطة المجانية، فالنسخة المستقلة تعطيك كل الحسابات التلقائية مجاناً — استخدمها كمركز لأرقامك.</p></details>
+    <details><summary>كيف أستخدمه إن لم أكن خبيراً تقنياً؟</summary><p>لا تحتاج أي معرفة تقنية. النسخة المستقلة تفتح بالنقر المزدوج على الملف وتعمل في أي متصفح. وإن أردت Notion، فاتبع دليل البناء خطوة بخطوة — مكتوب بلغة بسيطة لا بلغة تقنية.</p></details>
+    <details><summary>هل يناسب متجري الإلكتروني فعلاً؟</summary><p>صُمم لأصحاب المتاجر الصغيرة والمستقلين: مهام الطلبات والشحن والمخزون موجودة في مكتبة الـ60 مهمة، والتدفق النقدي يفصل الربح عن النقد الفعلي — وهو بالضبط ما يتعثر فيه كثير من المتاجر الإلكترونية.</p></details>
+    <details><summary>هل بياناتي آمنة؟</summary><p>بياناتك في النسخة المستقلة تُحفظ داخل متصفحك على جهازك فقط، ولا تُرسل إلى أي خادم. وفي Notion تبقى بياناتك في مساحة عملك أنت. نحن لا نصل إليها ولا نراها.</p></details>
+    <details><summary>أين أغيّر العملة؟</summary><p>في النسخة المستقلة: الإعدادات ← رمز العملة (ريال، درهم، دينار، دولار…). وفي Notion: كل خاصية Number ← Format ← Currency ← اختر عملتك. القالب لا يثبّت أي عملة افتراضية.</p></details>
+    <details><summary>هل يمكنني بيع القالب أو مشاركته؟</summary><p>لا. الترخيص شخصي: نسخة واحدة لكل مشترٍ. يمكنك تعديل القالب كما تشاء واستخدامه في نشاطك، لكن لا يجوز إعادة بيعه أو مشاركته أو نشره.</p></details>
+    <details><summary>ماذا لو لم يناسبني؟</summary><p>لديك 14 يوماً للاسترجاع الكامل، بلا أسئلة وبلا تعقيد. راسلنا من بريد الطلب وسنعيد المبلغ.</p></details>
+  </div>
+</section>
+
+<!-- خاتمة -->
+<section class="final">
+  <div class="wrap">
+    <div class="box">
+      <h2>الفوضى لا تنتهي وحدها</h2>
+      <p>كل شهر تؤجّل فيه التنظيم، تذهب ساعات من وقتك إلى مواعيد المتابعة والبحث عن الأرقام. النظام ليس رفاهية — بل هو ما يحوّل عملاً فوضوياً إلى عمل يُدار.</p>
+      <div class="price-inline" style="justify-content:center;margin:22px 0">
+        <span class="price-now">15$</span>
+        <span class="price-old">49$</span>
+        <span class="price-tag">سعر الإطلاق</span>
+      </div>
+      <a class="btn btn-primary btn-lg" href="#" data-cta>احصل على نسختك الآن</a>
+      <div style="margin-top:14px;font-size:13.5px;color:var(--ink2)">تسليم فوري · ضمان 14 يوماً · تحديثات مجانية</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Business OS — نظام الأعمال والمالية</h4>
+        <p style="max-width:420px">قالب رقمي تفاعلي للمستقلين وأصحاب المشاريع المصغرة وأصحاب المتاجر الإلكترونية. عربي بالكامل، من اليمين لليسار.</p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#inside">وحدات النظام</a></li>
+          <li><a href="#buy">السعر والعرض</a></li>
+          <li><a href="#faq">أسئلة شائعة</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>الدعم</h4>
+        <ul>
+          <li id="support-mail-item" hidden><a id="support-mail" href="#">راسلنا بالبريد</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
+          <li><a href="#refund">سياسة الاسترجاع</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 — كل الحقوق محفوظة.</span>
+      <span>منتج رقمي يُسلَّم كملفات. الأرقام في الصور بيانات تجريبية توضيحية.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky">
+  <div class="wrap sticky-in">
+    <div class="sticky-price"><s>49$</s><b>15$</b><em>سعر الإطلاق</em></div>
+    <div class="sp"></div>
+    <a class="btn btn-primary btn-sm" href="#buy" data-cta>احصل على نسختك الآن</a>
+  </div>
+</div>
+
+<script>
+/* ضع رابط الدفع الخاص بك بين علامتي التنصيص أدناه */
+const CHECKOUT_URL = "#buy";
+/* ضع بريد الدعم هنا ليظهر رابط التواصل في التذييل (اتركه فارغاً لإخفائه) */
+const SUPPORT_EMAIL = "";
+
+document.querySelectorAll('[data-cta]').forEach(function(a){
+  a.setAttribute('href', CHECKOUT_URL);
+});
+if (SUPPORT_EMAIL) {
+  document.getElementById('support-mail').setAttribute('href', 'mailto:' + SUPPORT_EMAIL);
+  document.getElementById('support-mail-item').hidden = false;
+}
+</script>
+</body>
+</html>
